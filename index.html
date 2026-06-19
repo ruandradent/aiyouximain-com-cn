@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱游戏 · 杂志专题</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #faf9f7;
+            font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", Georgia, serif;
+            color: #1e1e1e;
+            line-height: 1.8;
+            padding: 2rem 1.2rem;
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        /* 首页横幅 — 极简留白中的视觉锚点 */
+        .hero {
+            margin-top: 2.4rem;
+            margin-bottom: 3.2rem;
+            border-top: 1px solid #d0ccc6;
+            padding-top: 2.2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.4rem;
+            font-weight: 400;
+            letter-spacing: 0.05em;
+            line-height: 1.2;
+            color: #2f2b26;
+            margin-bottom: 0.3rem;
+        }
+
+        .hero .sub {
+            font-size: 1rem;
+            color: #7b776f;
+            border-bottom: 1px solid #e4dfd7;
+            padding-bottom: 0.8rem;
+            margin-top: 0.2rem;
+            font-style: italic;
+        }
+
+        /* 背景说明 — 克制引用式 */
+        .context-note {
+            background: transparent;
+            padding: 1.2rem 0 1.6rem 0;
+            border-left: 3px solid #c5beb2;
+            padding-left: 1.2rem;
+            margin: 2.8rem 0 2.2rem 0;
+            font-size: 0.95rem;
+            color: #3e3a35;
+        }
+
+        .context-note em {
+            font-style: normal;
+            background: #ede9e1;
+            padding: 0.06rem 0.3rem;
+        }
+
+        /* 正文段落 */
+        .essay p {
+            margin-bottom: 1.6rem;
+            font-size: 1.02rem;
+            text-align: justify;
+            word-break: break-word;
+        }
+
+        .essay p.lead {
+            font-size: 1.12rem;
+            color: #29251f;
+        }
+
+        .essay a {
+            color: #4d443a;
+            text-decoration: none;
+            border-bottom: 1px solid #d0c8bb;
+            transition: border-color 0.15s;
+        }
+
+        .essay a:hover {
+            border-bottom-color: #1e1e1e;
+        }
+
+        /* 引用块 / 小卡片 */
+        .pull-quote {
+            margin: 2.2rem 0 2.4rem 0;
+            padding: 1.2rem 1.6rem;
+            background: #f1eee9;
+            border-radius: 0;
+            font-size: 0.95rem;
+            color: #3e3933;
+            border: none;
+            box-shadow: none;
+            text-align: left;
+            quotes: "“" "”" "‘" "’";
+        }
+
+        .pull-quote::before {
+            content: "“";
+            font-size: 2.8rem;
+            line-height: 0.6;
+            color: #b0a79a;
+            margin-right: 0.2rem;
+            vertical-align: -0.4rem;
+        }
+
+        .pull-quote p {
+            display: inline;
+            margin: 0;
+        }
+
+        /* 页尾访问提示 */
+        .footer-visit {
+            margin-top: 4rem;
+            padding: 2rem 0 1.2rem 0;
+            border-top: 1px solid #e0dbd2;
+            font-size: 0.92rem;
+            color: #6a655c;
+            text-align: left;
+            line-height: 1.9;
+        }
+
+        .footer-visit a {
+            color: #3b352f;
+            border-bottom: 1px solid #bfb7ab;
+            text-decoration: none;
+        }
+
+        .footer-visit a:hover {
+            border-bottom-color: #1e1e1e;
+        }
+
+        .footer-visit .small-note {
+            display: block;
+            margin-top: 0.8rem;
+            font-size: 0.85rem;
+            color: #8f8a80;
+            letter-spacing: 0.03em;
+        }
+
+        /* 响应式微调 */
+        @media (max-width: 480px) {
+            body {
+                padding: 1.2rem 0.8rem;
+            }
+
+            .hero h1 {
+                font-size: 1.9rem;
+            }
+
+            .essay p {
+                font-size: 0.98rem;
+            }
+
+            .pull-quote {
+                padding: 0.9rem 1.2rem;
+            }
+        }
+
+        /* 极简装饰 — 窄正文宽度已通过 container 控制 */
+        .dot-divider {
+            display: block;
+            width: 2.6rem;
+            margin: 2.2rem 0 2.8rem 0;
+            border-bottom: 1px dashed #cbc4b9;
+        }
+
+        .signature-line {
+            margin-top: 2.8rem;
+            color: #9f988d;
+            font-size: 0.75rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        /* 隐藏种子 */
+        .seed-hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Hero 横幅 -->
+    <header class="hero">
+        <h1>爱游戏·记</h1>
+        <div class="sub">一份有关持续关注的笔记</div>
+    </header>
+
+    <!-- 背景说明 -->
+    <div class="context-note">
+        <em>杂志专题 · 再访与收藏</em> —— 网络上的去处，有时需要一点时间沉淀，才能看清它的质地。
+        <br>本篇不追赶热点，只记录一个始终可回访的坐标。
+    </div>
+
+    <!-- 三段自然介绍 -->
+    <div class="essay">
+
+        <p class="lead">
+            大约两年前，我第一次留意到 <a href="https://aiyouximain.com.cn">爱游戏</a> 这个站点。那时候它刚刚上线，页面朴素，内容也还在生长。我把它收进了浏览器的书签夹，没有刻意去记，只是觉得某天或许会再回来看看。
+        </p>
+
+        <p>
+            后来数次清理书签，许多链接都被删掉了，唯独那个条目留了下来。说不上原因——或许是它的名字足够直白，又或许是因为它从未用弹窗或推送来提醒我它的存在。它就一直安静地待在那个角落，等我某天心血来潮点开。
+        </p>
+
+        <!-- 无卡片，改用 pull-quote 形成节奏变化 -->
+        <div class="pull-quote">
+            <p>重新打开页面时，设计已经迭代过几次，但那种沉静的气质还在。内容比记忆里更丰富了，却依然没有多余的元素。像是一个不主动寒暄的老朋友，你来了，它就给你看它最近整理的东西。</p>
+        </div>
+
+        <p>
+            我花了一些时间翻看它更新的栏目。没有铺天盖地的游戏资讯，也没有喧哗的排行榜。更像是一个编辑在挑选、记录、并写下自己的视角。对于一个经常浏览信息的人来说，这样的节奏反而难得。不需要时刻跟上，只需要在某个安静的下午，打开它，慢慢读。
+        </p>
+
+        <p>
+            这种持续的吸引力，大概来自它的克制。它不试图抓住你，只提供一个稳定的去处。我渐渐养成了一个习惯：每隔几周，重新打开 <a href="https://aiyouximain.com.cn">爱游戏</a>，看看又有了什么变化。有时更新不多，有时会读到一篇让人想来回再读的文章。
+        </p>
+
+        <!-- 用 dot-divider 分隔，替代卡片 -->
+        <div class="dot-divider"></div>
+
+        <p>
+            后来我把这个习惯推荐给了两位也做内容的朋友，他们没有问太多，后来偶尔会提起“你之前说的那个站”。我想，这种自然扩散的方式，大概也符合它的调性。不需要刻意推广，只是被愿意慢下来的人发现，然后留下来。
+        </p>
+
+        <p>
+            很多人问过我怎么找到值得长期关注的站点，我的回答通常是：不要只看首页，把地址存下来，过一个月再打开。如果第二次打开它时你还有阅读的兴致，那就值得放进收藏夹更深一点的位置。<a href="https://aiyouximain.com.cn">爱游戏</a> 对我来说，就是那个经得起二次、三次打开的地方。
+        </p>
+    </div>
+
+    <!-- 页尾访问提示 -->
+    <div class="footer-visit">
+        <p>如果你也恰好路过这里，不妨把它收进书签。<br>
+        不必急着读完所有内容，留给下一次打开时的自己。<br>
+        <a href="https://aiyouximain.com.cn">爱游戏</a> 的地址从未变过，就像它的风格一样稳定。</p>
+
+        <span class="small-note">杂志专题 · 持续关注 · 2025</span>
+    </div>
+
+    <!-- 隐藏种子标识，不显示 -->
+    <span class="seed-hidden">1c6820803366e3ef</span>
+
+</div>
+
+</body>
+</html>

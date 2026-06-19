@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ruandradent.github.io/aiyouximain-com-cn/sitemap.xml
